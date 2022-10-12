@@ -3,19 +3,8 @@ using UnityEngine;
 
 namespace RPG.Core
 {
-  public class IAction : MonoBehaviour
+  public interface IAction
   {
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    void Cancel();
   }
 }
