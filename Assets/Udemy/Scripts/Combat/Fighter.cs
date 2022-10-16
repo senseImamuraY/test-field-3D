@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using RPG.Movement;
 using RPG.Core;
+using UnityEngine.UIElements;
 
 namespace RPG.Combat
 {
@@ -13,7 +14,7 @@ namespace RPG.Combat
     [SerializeField] float weaponDamage = 5f;
 
     Health target;
-    float timeSinceLastAttack = 0;
+    float timeSinceLastAttack = Mathf.Infinity;
     
     private void Update()
     {
@@ -60,7 +61,7 @@ namespace RPG.Combat
       if(target == null) return;
       target.TakeDamage(weaponDamage);
     }
-    public bool CanAttack(CombatTarget combatTarget)
+    public bool CanAttack(GameObject combatTarget)
     {
       if (combatTarget == null) { return false; }
       Health targetToTest = combatTarget.GetComponent<Health>();
@@ -72,10 +73,11 @@ namespace RPG.Combat
       return Vector3.Distance(transform.position, target.transform.position) < weaponRange;
     }
 
-    public void Attack(CombatTarget combatTarget)
+    public void Attack(GameObject combatTarget)
     {
       GetComponent<ActionScheduler>().StartAction(this);
       target = combatTarget.GetComponent<Health>();
+      //Debug.Log($"{name} is attacking {target}");
     }
 
     public void Cancel()
