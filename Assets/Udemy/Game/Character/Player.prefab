@@ -2317,6 +2317,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1509652407, guid: 1cd9f93ae62749c44a173e5a40dfdd61, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1509652414, guid: 1cd9f93ae62749c44a173e5a40dfdd61, type: 3}
       propertyPath: weaponDamage
       value: 10
@@ -2380,18 +2384,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 213605859267874699, guid: 1cd9f93ae62749c44a173e5a40dfdd61, type: 3}
   m_PrefabInstance: {fileID: 6470991906324404887}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8752431109499801806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6573977544603620636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39bb2c45ccca1cb4db6cfd7636d26513, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &895580019
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2419,6 +2411,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPoints: 200
+--- !u!114 &8752431109499801806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6573977544603620636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39bb2c45ccca1cb4db6cfd7636d26513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6922685192003278031 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4170268777584430680, guid: 1cd9f93ae62749c44a173e5a40dfdd61, type: 3}
